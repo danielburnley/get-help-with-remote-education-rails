@@ -28,3 +28,7 @@ yarn-debug.log*
 
 .env
 *.log
+
+# Ignore temporary sqlite databases
+
+sqlite_temp_db
