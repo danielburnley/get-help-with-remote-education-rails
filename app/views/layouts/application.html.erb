@@ -24,6 +24,7 @@
     </script>
 
     <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+    <%= render 'layouts/cookie-banner' %>
 
     <header class="govuk-header" role="banner" data-module="govuk-header">
       <div class="govuk-header__container govuk-width-container">
@@ -41,25 +42,24 @@
           <% end %>
         </div>
         <div class="govuk-header__content">
-          <%= link_to "GOV.UK Rails Boilerplate", "/", class: "govuk-header__link govuk-header__link--service-name" %>
+          <%= link_to "Get Help with Remote Education", "/", class: "govuk-header__link govuk-header__link--service-name" %>
           <button type="button" role="button" data-module="govuk-button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
-          <nav>
-            <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-              <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-                <%= link_to "Navigation item 1", "#", class: "govuk-header__link" %>
-              </li>
-              <li class="govuk-header__navigation-item">
-                <%= link_to "Navigation item 2", "#", class: "govuk-header__link" %>
-              </li>
-              <li class="govuk-header__navigation-item">
-                <%= link_to "Navigation item 3", "#", class: "govuk-header__link" %>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
     </header>
 
+    <div class="govuk-width-container">
+      <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">
+            alpha
+          </strong>
+          <span class="govuk-phase-banner__text">
+            This is a new service – your feedback will help us to improve it.
+          </span>
+        </p>
+      </div>
+    </div>
     <div class="govuk-width-container">
       <main class="govuk-main-wrapper " id="main-content" role="main">
         <%= yield %>
